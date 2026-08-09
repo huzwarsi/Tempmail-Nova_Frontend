@@ -1,6 +1,11 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+module.exports = {
+  content: [
+    './app/**/*.{js,ts,jsx,tsx}',
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+    './src/**/*.{js,ts,jsx,tsx}',
+  ],
   darkMode: 'class',
   theme: {
     extend: {
@@ -35,8 +40,8 @@ export default {
       fontFamily: {
         sans: ['Arial', 'Helvetica', 'sans-serif'],
         arial: ['Arial', 'Helvetica', 'sans-serif'],
-        manrope: ['Manrope', 'sans-serif'],
-        mono: ['Arial', 'Helvetica', 'sans-serif'],
+        manrope: ['var(--font-manrope)', 'Manrope', 'sans-serif'],
+        mono: ['var(--font-jetbrains)', 'JetBrains Mono', 'monospace'],
       },
     },
   },
