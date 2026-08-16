@@ -46,76 +46,75 @@ export default function GeneratorCard() {
   };
 
   return (
-    <div className="w-full max-w-2xl sm:max-w-3xl mx-auto cyber-card rounded-2xl p-5 sm:p-7 relative overflow-hidden transition-all duration-300">
+    <div className="w-full max-w-xl sm:max-w-2xl mx-auto cyber-card rounded-2xl p-4 sm:p-5 relative overflow-hidden transition-all duration-300">
       {/* Background Ambient Glows */}
       <div className="absolute -top-24 -right-24 w-80 h-80 bg-emerald-500/15 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute -bottom-24 -left-24 w-80 h-80 bg-teal-500/10 rounded-full blur-3xl pointer-events-none" />
 
       {/* Header Status Bar */}
-      <div className="flex flex-row items-center justify-between gap-3 mb-5 pb-4 border-b border-slate-200 dark:border-emerald-500/20">
-        <div className="flex items-center space-x-2.5">
-          <span className="relative flex h-3 w-3">
+      <div className="flex flex-row items-center justify-between gap-3 mb-3.5 pb-3 border-b border-slate-200 dark:border-emerald-500/20">
+        <div className="flex items-center space-x-2">
+          <span className="relative flex h-2.5 w-2.5">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500 shadow-md shadow-emerald-500/50"></span>
+            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500 shadow-md shadow-emerald-500/50"></span>
           </span>
-          <span className="text-[11px] font-extrabold text-emerald-700 dark:text-emerald-400 tracking-wider uppercase font-mono">
+          <span className="text-[10px] font-extrabold text-emerald-700 dark:text-emerald-400 tracking-wider uppercase font-mono">
             Live Mailbox Active
           </span>
         </div>
 
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center space-x-1.5">
           <button
             onClick={() => setCustomModalOpen(true)}
-            className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-emerald-50 dark:bg-emerald-950/60 hover:bg-emerald-100 dark:hover:bg-emerald-900/60 text-xs font-bold text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-500/30 transition shadow-sm"
+            className="flex items-center space-x-1.5 px-2.5 py-1 rounded-lg bg-emerald-50 dark:bg-emerald-950/60 hover:bg-emerald-100 dark:hover:bg-emerald-900/60 text-[11px] font-bold text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-500/30 transition shadow-sm"
           >
-            <Edit3 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
+            <Edit3 className="w-3 h-3 text-emerald-600 dark:text-emerald-400" />
             <span>Custom Address</span>
           </button>
           <button
             onClick={() => setQrModalOpen(true)}
-            className="p-1.5 rounded-lg bg-emerald-50 dark:bg-emerald-950/60 hover:bg-emerald-100 dark:hover:bg-emerald-900/60 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-500/30 transition shadow-sm"
+            className="p-1 rounded-lg bg-emerald-50 dark:bg-emerald-950/60 hover:bg-emerald-100 dark:hover:bg-emerald-900/60 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-500/30 transition shadow-sm"
             title="Scan QR Code"
           >
-            <QrCode className="w-4 h-4" />
+            <QrCode className="w-3.5 h-3.5" />
           </button>
         </div>
       </div>
 
       {/* Primary Email Box Container */}
-      <div className="space-y-2.5 mb-5">
-        <label className="block text-[11px] font-bold text-emerald-700 dark:text-emerald-400/90 uppercase tracking-widest font-mono">
+      <div className="space-y-2 mb-4">
+        <label className="block text-[10px] font-bold text-emerald-700 dark:text-emerald-400/90 uppercase tracking-widest font-mono">
           YOUR TEMPORARY EMAIL ADDRESS:
         </label>
 
-        <div className="flex flex-col sm:flex-row items-stretch gap-3">
+        <div className="flex flex-col sm:flex-row items-stretch gap-2.5">
           <div className="relative flex-1 group">
             <input
               type="text"
               readOnly
               value={currentAddress || 'Generating email address...'}
-              className="w-full bg-white dark:bg-[#04070d] border-2 border-emerald-500/50 focus:border-emerald-500 rounded-xl px-4 py-3.5 text-sm sm:text-base font-mono-code text-slate-900 dark:text-emerald-300 font-bold tracking-wide shadow-inner truncate transition-all duration-200 group-hover:border-emerald-500"
+              className="w-full bg-white dark:bg-[#04070d] border-2 border-emerald-500/50 focus:border-emerald-500 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm font-mono-code text-slate-900 dark:text-emerald-300 font-bold tracking-wide shadow-inner truncate transition-all duration-200 group-hover:border-emerald-500"
             />
-            <div className="absolute right-3.5 top-1/2 -translate-y-1/2 flex items-center space-x-1">
-              <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+            <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center space-x-1">
+              <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
             </div>
           </div>
 
           <button
             onClick={handleCopy}
-            className={`flex items-center justify-center space-x-2 px-7 py-3.5 rounded-xl font-bold text-white dark:text-slate-950 shadow-lg transition transform active:scale-95 text-xs sm:text-sm tracking-wide ${
-              copied
+            className={`flex items-center justify-center space-x-1.5 px-5 py-2.5 rounded-xl font-bold text-white dark:text-slate-950 shadow-lg transition transform active:scale-95 text-xs tracking-wide ${copied
                 ? 'bg-emerald-700 dark:bg-emerald-400 shadow-emerald-500/40'
                 : 'bg-emerald-600 hover:bg-emerald-700 dark:bg-gradient-to-r dark:from-emerald-500 dark:via-emerald-400 dark:to-teal-400 dark:hover:from-emerald-400 dark:hover:to-teal-300 shadow-emerald-500/30'
-            }`}
+              }`}
           >
             {copied ? (
               <>
-                <Check className="w-4 h-4 stroke-[3]" />
+                <Check className="w-3.5 h-3.5 stroke-[3]" />
                 <span>COPIED!</span>
               </>
             ) : (
               <>
-                <Copy className="w-4 h-4 stroke-[2.5]" />
+                <Copy className="w-3.5 h-3.5 stroke-[2.5]" />
                 <span>COPY</span>
               </>
             )}
@@ -124,36 +123,36 @@ export default function GeneratorCard() {
       </div>
 
       {/* Control Buttons & Expiration Tracker */}
-      <div className="flex flex-wrap items-center justify-between gap-3 pt-2">
-        <div className="flex items-center space-x-2">
+      <div className="flex flex-wrap items-center justify-between gap-2.5 pt-1">
+        <div className="flex items-center space-x-1.5">
           <button
             onClick={generateRandomInbox}
             disabled={loading}
-            className="flex items-center space-x-1.5 px-4 py-2 rounded-xl bg-white dark:bg-slate-900/80 hover:bg-slate-50 dark:hover:bg-slate-800 text-xs font-bold text-slate-800 dark:text-slate-200 border border-slate-300 dark:border-emerald-500/25 transition shadow-sm"
+            className="flex items-center space-x-1 px-3 py-1.5 rounded-xl bg-white dark:bg-slate-900/80 hover:bg-slate-50 dark:hover:bg-slate-800 text-[11px] font-bold text-slate-800 dark:text-slate-200 border border-slate-300 dark:border-emerald-500/25 transition shadow-sm"
           >
-            <Sparkles className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
+            <Sparkles className="w-3 h-3 text-emerald-600 dark:text-emerald-400" />
             <span>Random Address</span>
           </button>
 
           <button
             onClick={() => fetchEmails(currentAddress)}
             disabled={loading}
-            className="flex items-center space-x-1.5 px-4 py-2 rounded-xl bg-white dark:bg-slate-900/80 hover:bg-slate-50 dark:hover:bg-slate-800 text-xs font-bold text-slate-800 dark:text-slate-200 border border-slate-300 dark:border-emerald-500/25 transition shadow-sm"
+            className="flex items-center space-x-1 px-3 py-1.5 rounded-xl bg-white dark:bg-slate-900/80 hover:bg-slate-50 dark:hover:bg-slate-800 text-[11px] font-bold text-slate-800 dark:text-slate-200 border border-slate-300 dark:border-emerald-500/25 transition shadow-sm"
           >
-            <RefreshCw className={`w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 ${loading ? 'animate-spin' : ''}`} />
+            <RefreshCw className={`w-3 h-3 text-emerald-600 dark:text-emerald-400 ${loading ? 'animate-spin' : ''}`} />
             <span>Refresh</span>
           </button>
 
           <button
             onClick={deleteCurrentInbox}
-            className="flex items-center space-x-1.5 px-3.5 py-2 rounded-xl bg-rose-50 dark:bg-rose-950/40 hover:bg-rose-100 dark:hover:bg-rose-900/60 text-xs font-bold text-rose-600 dark:text-rose-400 border border-rose-200 dark:border-rose-500/30 transition shadow-sm"
+            className="flex items-center space-x-1 px-3 py-1.5 rounded-xl bg-rose-50 dark:bg-rose-950/40 hover:bg-rose-100 dark:hover:bg-rose-900/60 text-[11px] font-bold text-rose-600 dark:text-rose-400 border border-rose-200 dark:border-rose-500/30 transition shadow-sm"
           >
-            <Trash2 className="w-3.5 h-3.5" />
+            <Trash2 className="w-3 h-3" />
             <span>Delete</span>
           </button>
         </div>
 
-        <div className="w-full sm:w-60 mt-1 sm:mt-0">
+        <div className="w-full sm:w-52 mt-1 sm:mt-0">
           <ExpirationTimer expiresAt={inboxDetails?.expiresAt} />
         </div>
       </div>

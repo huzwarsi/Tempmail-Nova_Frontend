@@ -34,11 +34,6 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/temporary-email" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">
-                  Disposable Email
-                </Link>
-              </li>
-              <li>
                 <Link href="/how-it-works" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">
                   How It Works
                 </Link>
@@ -98,7 +93,7 @@ export default function Footer() {
             </p>
             <div className="flex items-center space-x-2 text-xs text-emerald-700 dark:text-emerald-400/80 font-mono">
               <Shield className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-              <span>256-bit Encrypted Connection</span>
+              <span>HTTPS Secured Connection</span>
             </div>
           </div>
         </div>

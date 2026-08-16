@@ -6,22 +6,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const staticRoutes = [
     '',
-    '/temporary-email',
     '/about',
     '/contact',
     '/faq',
     '/how-it-works',
     '/privacy',
-    '/privacy-policy',
     '/terms',
     '/cookies',
-    '/cookie-policy',
     '/blog',
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: 'daily' as const,
-    priority: route === '' ? 1.0 : route === '/temporary-email' ? 0.9 : 0.8,
+    priority: route === '' ? 1.0 : 0.8,
   }));
 
   const blogRoutes = BLOG_POSTS.map((post) => ({

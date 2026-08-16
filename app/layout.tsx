@@ -28,21 +28,28 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://tempmailnova.com'),
+  alternates: {
+    canonical: 'https://tempmailnova.com',
+  },
   title: {
-    default: 'TempMail Nova - Fast, Secure & Anonymous Disposable Mail Service',
+    default: 'Temp Mail – Free Temporary Email Generator | TempMail Nova',
     template: '%s | TempMail Nova',
   },
   description:
-    'Generate instant temporary disposable email addresses with TempMail Nova. Protect your personal inbox from spam, bots, phishers, and newsletters.',
+    'Generate a free temporary email address instantly with TempMail Nova. Receive verification emails, OTPs and notifications in a disposable inbox without registration.',
   keywords: [
-    'temp mail nova',
-    'tempmail nova',
+    'tempmail',
+    'temp mail',
+    'temporary email',
+    'temporary email address',
     'disposable email',
-    'temporary inbox',
-    'throwaway mail',
-    'anti-spam mail',
-    'mail generator',
+    'disposable email address',
+    'temp email',
     'free temp mail',
+    'temporary mail',
+    'throwaway email',
+    'temporary inbox',
+    'free disposable email',
   ],
   authors: [{ name: 'TempMail Nova Team' }],
   creator: 'TempMail Nova',
@@ -63,9 +70,9 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://tempmailnova.com',
     siteName: 'TempMail Nova',
-    title: 'TempMail Nova - Fast & Anonymous Temporary Disposable Email',
+    title: 'Temp Mail – Free Temporary Email Generator | TempMail Nova',
     description:
-      'Instant disposable temp mail generator. Protect your real inbox with live WebSocket updates and custom domains.',
+      'Generate a free temporary email address instantly with TempMail Nova. Receive verification emails, OTPs and notifications in a disposable inbox without registration.',
     images: [
       {
         url: 'https://tempmailnova.com/logo.png',
@@ -77,8 +84,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'TempMail Nova - Instant Temporary Disposable Email',
-    description: 'Protect your inbox from spam with zero registration temporary email addresses.',
+    title: 'Temp Mail – Free Temporary Email Generator | TempMail Nova',
+    description: 'Generate a free temporary email address instantly with TempMail Nova. Receive verification emails and OTPs without registration.',
     images: ['https://tempmailnova.com/logo.png'],
   },
   icons: {
@@ -90,12 +97,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${manrope.variable} ${jetbrainsMono.variable} dark`}>
+    <html lang="en" className={`${manrope.variable} ${jetbrainsMono.variable} dark`} suppressHydrationWarning>
       <head>
         <WebSiteJsonLd />
         <OrganizationJsonLd />
       </head>
-      <body className="bg-slate-50 text-slate-900 dark:bg-[#05080d] dark:text-slate-100 font-manrope transition-colors duration-200 selection:bg-emerald-500 selection:text-slate-950 min-h-screen flex flex-col">
+      <body className="bg-slate-50 text-slate-900 dark:bg-[#05080d] dark:text-slate-100 font-manrope transition-colors duration-200 selection:bg-emerald-500 selection:text-slate-950 min-h-screen flex flex-col" suppressHydrationWarning>
         <ThemeProvider>
           <AuthProvider>
             <InboxProvider>

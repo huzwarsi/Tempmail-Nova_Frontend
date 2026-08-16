@@ -29,7 +29,30 @@ export function OrganizationJsonLd() {
     name: 'TempMail Nova',
     url: 'https://tempmailnova.com',
     logo: 'https://tempmailnova.com/logo.png',
-    sameAs: [],
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
+export function BreadcrumbListJsonLd({
+  items,
+}: {
+  items: { name: string; item: string }[];
+}) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((it, idx) => ({
+      '@type': 'ListItem',
+      position: idx + 1,
+      name: it.name,
+      item: it.item,
+    })),
   };
 
   return (
@@ -77,14 +100,19 @@ export function ArticleJsonLd({
 }) {
   const schema = {
     '@context': 'https://schema.org',
-    '@type': 'Article',
+    '@type': 'BlogPosting',
     headline: title,
     description: description,
     url: url,
     datePublished: datePublished,
+    dateModified: datePublished,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': url,
+    },
     author: {
       '@type': 'Organization',
-      name: authorName || 'TempMail Nova Security Team',
+      name: authorName || 'TempMail Nova Editorial Team',
     },
     publisher: {
       '@type': 'Organization',

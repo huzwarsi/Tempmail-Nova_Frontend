@@ -60,7 +60,7 @@ export default function ArticleSection() {
                 Spam emails account for over 45% of global email traffic. Once your email address gets added to a marketing list, stopping the influx of junk mail becomes nearly impossible.
               </p>
               <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                By using TempMail Nova for one-off registrations, wifi logins, and ebook downloads, your personal inbox remains completely clean and immune to promotional spam and phishing attempts.
+                By using TempMail Nova for one-off registrations, wifi logins, and ebook downloads, your personal inbox remains clean and protected from promotional spam and unsolicited newsletters.
               </p>
             </div>
             <div className="pt-2">

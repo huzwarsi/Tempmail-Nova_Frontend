@@ -13,7 +13,6 @@ export default function Navbar() {
 
   const navLinks = [
     { href: '/', label: 'Inbox' },
-    { href: '/temporary-email', label: 'Generator' },
     { href: '/about', label: 'About', icon: Info },
     { href: '/blog', label: 'Blog', icon: BookOpen },
     { href: '/faq', label: 'FAQ', icon: HelpCircle },
@@ -33,9 +32,6 @@ export default function Navbar() {
               <div className="flex items-center space-x-2">
                 <span className="font-black text-lg tracking-tight text-slate-900 dark:text-white">
                   TempMail <span className="text-emerald-600 dark:text-emerald-400">Nova</span>
-                </span>
-                <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-extrabold bg-emerald-500/15 border border-emerald-500/30 text-emerald-700 dark:text-emerald-300 shadow-sm font-mono">
-                  NOVA
                 </span>
               </div>
               <span className="block text-[10px] font-extrabold text-slate-500 dark:text-slate-400 tracking-wider">

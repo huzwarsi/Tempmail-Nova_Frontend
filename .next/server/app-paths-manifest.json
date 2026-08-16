@@ -1,8 +1,4 @@
 {
-  "/contact/page": "app/contact/page.js",
   "/page": "app/page.js",
-  "/faq/page": "app/faq/page.js",
-  "/blog/page": "app/blog/page.js",
-  "/about/page": "app/about/page.js",
-  "/temporary-email/page": "app/temporary-email/page.js"
+  "/contact/page": "app/contact/page.js"
 }

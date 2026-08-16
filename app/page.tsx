@@ -2,12 +2,9 @@
 
 import React from 'react';
 import Hero from '../components/landing/Hero';
-import Features from '../components/landing/Features';
-import ArticleSection from '../components/landing/ArticleSection';
-import StatsSection from '../components/landing/StatsSection';
+import EducationalContent from '../components/landing/EducationalContent';
 import FAQ from '../components/landing/FAQ';
 import { FAQ_LIST } from '../lib/faq-data';
-import Testimonials from '../components/landing/Testimonials';
 import InboxList from '../components/inbox/InboxList';
 import EmailViewer from '../components/inbox/EmailViewer';
 import { useInbox } from '../context/InboxContext';
@@ -26,7 +23,7 @@ export default function HomePage() {
         {/* Main Hero & Generator Section */}
         <Hero />
 
-        {/* Centered Inbox Container (Leaves Left & Right Empty Margins for Future AdSense Ads) */}
+        {/* Centered Inbox Container */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl sm:max-w-4xl mx-auto">
             {selectedEmail ? (
@@ -41,19 +38,10 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Features Grid */}
-        <Features />
+        {/* Complete Non-Repetitive Educational Content & H2 Hierarchy */}
+        <EducationalContent />
 
-        {/* Educational Article Section (Monetization & AdSense Content) */}
-        <ArticleSection />
-
-        {/* Live System Stats Counter */}
-        <StatsSection />
-
-        {/* Testimonials */}
-        <Testimonials />
-
-        {/* 10 FAQ Accordion */}
+        {/* 12 Verified Factual FAQ Accordion */}
         <FAQ />
       </div>
     </>

@@ -1,4 +1,5 @@
-import CookiePolicyPage, { metadata } from '../cookies/page';
+import { redirect } from 'next/navigation';
 
-export { metadata };
-export default CookiePolicyPage;
+export default function CookiePolicyRedirect() {
+  redirect('/cookies');
+}

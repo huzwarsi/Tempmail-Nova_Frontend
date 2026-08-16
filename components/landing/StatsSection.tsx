@@ -2,24 +2,20 @@
 
 import React, { useState, useEffect } from 'react';
 import API from '../../lib/api';
-import { Mail, ShieldCheck, Zap } from 'lucide-react';
+import { Mail, ShieldCheck, Zap, Server, Clock } from 'lucide-react';
 
 export default function StatsSection() {
-  const [stats, setStats] = useState({
-    activeMailboxes: 14205,
-    messagesProcessed: 894320,
-    spamBlockedPct: 99.8,
-  });
+  const [stats, setStats] = useState<any>(null);
 
   useEffect(() => {
     const fetchPublicStats = async () => {
       try {
         const { data } = await API.get('/analytics/public');
-        if (data && data.activeMailboxes) {
+        if (data && (data.activeMailboxes || data.messagesProcessed)) {
           setStats(data);
         }
       } catch (err) {
-        // Fallback to default realistic stats if API endpoint is not active
+        // Leave stats null to display factual architecture metrics
       }
     };
     fetchPublicStats();
@@ -34,9 +30,11 @@ export default function StatsSection() {
               <Mail className="w-5 h-5" />
             </div>
             <div className="text-2xl font-black text-slate-900 dark:text-white font-mono">
-              {stats.activeMailboxes.toLocaleString()}
+              {stats?.activeMailboxes ? stats.activeMailboxes.toLocaleString() : 'Instant'}
             </div>
-            <p className="text-xs font-bold text-slate-500 dark:text-slate-400">Active Temporary Mailboxes</p>
+            <p className="text-xs font-bold text-slate-500 dark:text-slate-400">
+              {stats?.activeMailboxes ? 'Active Temporary Mailboxes' : 'Disposable Inbox Generation'}
+            </p>
           </div>
 
           <div className="p-5 rounded-2xl bg-white dark:bg-[#080d16] border border-slate-200 dark:border-emerald-500/25 shadow-sm space-y-1">
@@ -44,19 +42,21 @@ export default function StatsSection() {
               <Zap className="w-5 h-5" />
             </div>
             <div className="text-2xl font-black text-slate-900 dark:text-white font-mono">
-              {stats.messagesProcessed.toLocaleString()}+
+              {stats?.messagesProcessed ? `${stats.messagesProcessed.toLocaleString()}+` : 'WebSocket Push'}
             </div>
-            <p className="text-xs font-bold text-slate-500 dark:text-slate-400">Messages Ingested</p>
+            <p className="text-xs font-bold text-slate-500 dark:text-slate-400">
+              {stats?.messagesProcessed ? 'Messages Processed' : 'Real-Time Live Email Delivery'}
+            </p>
           </div>
 
           <div className="p-5 rounded-2xl bg-white dark:bg-[#080d16] border border-slate-200 dark:border-emerald-500/25 shadow-sm space-y-1">
             <div className="inline-flex p-2 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 mb-1">
-              <ShieldCheck className="w-5 h-5" />
+              <Clock className="w-5 h-5" />
             </div>
             <div className="text-2xl font-black text-slate-900 dark:text-white font-mono">
-              {stats.spamBlockedPct}%
+              24-Hour Purge
             </div>
-            <p className="text-xs font-bold text-slate-500 dark:text-slate-400">Spam Defense Efficiency</p>
+            <p className="text-xs font-bold text-slate-500 dark:text-slate-400">Automated Data Expiration</p>
           </div>
         </div>
       </div>
