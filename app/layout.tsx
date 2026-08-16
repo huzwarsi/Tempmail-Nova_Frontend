@@ -89,9 +89,13 @@ export const metadata: Metadata = {
     images: ['https://tempmailnova.com/logo.png'],
   },
   icons: {
-    icon: '/logo.png',
-    shortcut: '/logo.png',
-    apple: '/logo.png',
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: '/logo.png', type: 'image/png' },
+    ],
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
   },
 };
 
