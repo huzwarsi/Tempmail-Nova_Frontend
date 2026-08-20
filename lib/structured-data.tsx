@@ -6,7 +6,7 @@ export function WebSiteJsonLd() {
     '@type': 'WebSite',
     name: 'TempMail Nova',
     url: 'https://tempmailnova.com',
-    description: 'Fast, secure, and anonymous temporary disposable email service with real-time inbox updates.',
+    description: 'Free disposable temporary email generator with real-time inbox updates and automatic 24-hour message purges.',
     potentialAction: {
       '@type': 'SearchAction',
       target: 'https://tempmailnova.com/blog?q={search_term_string}',

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { BLOG_POSTS } from '../../../lib/blog-posts';
 import { ArticleJsonLd, FAQPageJsonLd, BreadcrumbListJsonLd } from '../../../lib/structured-data';
 import { Clock, Calendar, User, ArrowLeft, ArrowRight, Shield, BookOpen, CheckCircle2, ChevronRight } from 'lucide-react';
+import ShareButtons from '../../../components/blog/ShareButtons';
 
 interface Props {
   params: { slug: string };
@@ -205,6 +206,8 @@ export default function BlogPostPage({ params }: Props) {
               <span>{post.readTime}</span>
             </span>
           </div>
+
+          <ShareButtons url={articleUrl} title={post.title} />
         </header>
 
         {/* Article Body Content */}
@@ -348,6 +351,11 @@ export default function BlogPostPage({ params }: Props) {
               </div>
             </div>
           )}
+
+          {/* Share Article Bar */}
+          <div className="pt-6 border-t border-slate-200 dark:border-emerald-500/20">
+            <ShareButtons url={articleUrl} title={post.title} />
+          </div>
 
           {/* Internal Platform Links */}
           <div className="pt-6 border-t border-slate-200 dark:border-emerald-500/20 space-y-3">
