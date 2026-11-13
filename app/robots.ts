@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: ['/dashboard/', '/admin/', '/api/'],
+      disallow: ['/api/'],
     },
     sitemap: 'https://tempmailnova.com/sitemap.xml',
   };

@@ -6,7 +6,7 @@ import { BLOG_POSTS } from '../../lib/blog-posts';
 import { BreadcrumbListJsonLd } from '../../lib/structured-data';
 
 export const metadata: Metadata = {
-  title: 'Disposable Email & Privacy Guides | TempMail Nova Blog',
+  title: 'Disposable Email & Privacy Guides',
   description: 'Articles, security guides, and technical breakdowns on disposable temporary email, online privacy protection, spam prevention, and disposable mail architecture.',
   alternates: {
     canonical: 'https://tempmailnova.com/blog',
@@ -14,14 +14,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: 'https://tempmailnova.com/blog',
-    title: 'Disposable Email & Privacy Guides | TempMail Nova Blog',
+    title: 'Disposable Email & Privacy Guides | TempMail Nova',
     description: 'In-depth articles, security guides, and technical breakdowns on disposable temporary email and online privacy.',
     siteName: 'TempMail Nova',
     images: [{ url: 'https://tempmailnova.com/logo.png', width: 512, height: 512, alt: 'TempMail Nova Blog' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Disposable Email & Privacy Guides | TempMail Nova Blog',
+    title: 'Disposable Email & Privacy Guides | TempMail Nova',
     description: 'In-depth articles, security guides, and technical breakdowns on disposable temporary email and online privacy.',
     images: ['https://tempmailnova.com/logo.png'],
   },

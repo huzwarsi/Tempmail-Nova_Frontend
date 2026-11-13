@@ -5,7 +5,7 @@ import { ChevronRight } from 'lucide-react';
 import { BreadcrumbListJsonLd } from '../../lib/structured-data';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | TempMail Nova',
+  title: 'Privacy Policy',
   description:
     'Read the official TempMail Nova Privacy Policy detailing GDPR, CCPA, log files, cookie usage, and automated 24-hour mail deletion.',
   alternates: {
@@ -47,7 +47,7 @@ export default function PrivacyPolicyPage() {
 
       <div className="max-w-4xl mx-auto px-4 py-12 text-slate-700 dark:text-slate-300 space-y-6 font-manrope">
         {/* Visual Breadcrumb */}
-        <nav className="flex items-center space-x-2 text-xs text-slate-500 dark:text-slate-400 font-mono">
+        <nav aria-label="Breadcrumb" className="flex items-center space-x-2 text-xs text-slate-500 dark:text-slate-400 font-mono">
           <Link href="/" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">
             Home
           </Link>
@@ -60,14 +60,14 @@ export default function PrivacyPolicyPage() {
         
         <div className="space-y-6 text-sm leading-relaxed bg-white dark:bg-[#080d16]/90 backdrop-blur-xl p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-emerald-500/25 shadow-xl">
           <section className="space-y-2">
-            <h3 className="text-base font-bold text-slate-900 dark:text-white">1. Introduction & Overview</h3>
+            <h2 className="text-base font-bold text-slate-900 dark:text-white">1. Introduction & Overview</h2>
             <p>
               At TempMail Nova, protecting your privacy is our core priority. This Privacy Policy document contains types of information that is collected and recorded by TempMail Nova and how we use it.
             </p>
           </section>
 
           <section className="space-y-2">
-            <h3 className="text-base font-bold text-slate-900 dark:text-white">2. Log Files & Automated Purging</h3>
+            <h2 className="text-base font-bold text-slate-900 dark:text-white">2. Log Files & Automated Purging</h2>
             <p>
               TempMail Nova follows a standard procedure of using log files. These files log visitors when they visit websites. The information collected by log files includes internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks.
             </p>
@@ -77,7 +77,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           <section className="space-y-2">
-            <h3 className="text-base font-bold text-slate-900 dark:text-white">3. Cookies & Google AdSense DoubleClick DART Cookies</h3>
+            <h2 className="text-base font-bold text-slate-900 dark:text-white">3. Cookies & Google AdSense DoubleClick DART Cookies</h2>
             <p>
               Google is a third-party vendor on our site. It also uses cookies, known as DART cookies, to serve ads to our site visitors based upon their visit to tempmailnova.com and other sites on the internet.
             </p>
@@ -87,14 +87,14 @@ export default function PrivacyPolicyPage() {
           </section>
 
           <section className="space-y-2">
-            <h3 className="text-base font-bold text-slate-900 dark:text-white">4. Third-Party Advertising Partners</h3>
+            <h2 className="text-base font-bold text-slate-900 dark:text-white">4. Third-Party Advertising Partners</h2>
             <p>
               Some of advertisers on our site may use cookies and web beacons. Our advertising partners include Google AdSense. Third-party ad servers or ad networks uses technologies like cookies, JavaScript, or Web Beacons that are used in their respective advertisements and links that appear on TempMail Nova.
             </p>
           </section>
 
           <section className="space-y-2">
-            <h3 className="text-base font-bold text-slate-900 dark:text-white">5. GDPR & CCPA Data Protection Rights</h3>
+            <h2 className="text-base font-bold text-slate-900 dark:text-white">5. GDPR & CCPA Data Protection Rights</h2>
             <p>
               We would like to make sure you are fully aware of all of your data protection rights. Every user is entitled to the following:
             </p>
@@ -106,7 +106,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           <section className="space-y-2 pt-2 border-t border-slate-200 dark:border-emerald-500/20">
-            <h3 className="text-sm font-bold text-slate-900 dark:text-white">6. Contact Information</h3>
+            <h2 className="text-sm font-bold text-slate-900 dark:text-white">6. Contact Information</h2>
             <p className="text-xs">
               If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us at <span className="font-mono-code text-emerald-700 dark:text-emerald-400 font-bold">privacy@tempmailnova.com</span>.
             </p>
@@ -116,4 +116,3 @@ export default function PrivacyPolicyPage() {
     </>
   );
 }
-

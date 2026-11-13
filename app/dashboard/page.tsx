@@ -115,7 +115,7 @@ export default function DeveloperDashboardPage() {
         {newGeneratedKey && (
           <div className="p-4 bg-emerald-50 dark:bg-emerald-500/15 border border-emerald-300 dark:border-emerald-500/40 rounded-2xl space-y-2">
             <span className="text-xs font-bold text-emerald-800 dark:text-emerald-400 block uppercase">
-              ⚠️ SAVE YOUR API KEY NOW (It won't be shown again):
+              ⚠️ SAVE YOUR API KEY NOW (It won&apos;t be shown again):
             </span>
             <div className="flex items-center justify-between bg-white dark:bg-[#04070d] p-3 rounded-xl border border-slate-200 dark:border-emerald-500/30">
               <code className="text-xs font-mono-code text-emerald-800 dark:text-emerald-300 truncate">{newGeneratedKey}</code>
@@ -145,7 +145,7 @@ export default function DeveloperDashboardPage() {
               {apiKeys.length === 0 ? (
                 <tr>
                   <td colSpan={4} className="py-6 text-center text-slate-500">
-                    No active API keys found. Click "Generate New Key" above.
+                    No active API keys found. Click &quot;Generate New Key&quot; above.
                   </td>
                 </tr>
               ) : (

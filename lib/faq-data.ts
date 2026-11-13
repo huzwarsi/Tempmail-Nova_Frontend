@@ -1,7 +1,7 @@
 export const FAQ_LIST = [
   {
     q: 'What is a temporary email address?',
-    a: 'A temporary email address (also called disposable email or temp mail) is a short-lived inbox created without registration. It lets you receive confirmation links, OTP codes, and verification emails without exposing your personal email address.',
+    a: 'A temporary email address (also called disposable email, temp mail, burner email, or throwaway email) is a short-lived inbox created without registration. It lets you receive confirmation links, OTP codes, and verification emails without exposing your personal email address.',
   },
   {
     q: 'Is TempMail Nova free to use?',
@@ -10,6 +10,14 @@ export const FAQ_LIST = [
   {
     q: 'How long does a temporary email last on TempMail Nova?',
     a: 'Incoming emails and mailboxes are stored temporarily and automatically purged from our servers after 24 hours to protect user privacy and prevent data accumulation.',
+  },
+  {
+    q: 'How does TempMail Nova compare to 10 minute mail services?',
+    a: 'Unlike traditional 10 minute mail or ten minute mail services that expire in only 10 minutes—often causing users to lose delayed verification codes—TempMail Nova retains messages for 24 hours. This gives you ample time to receive confirmation emails while ensuring all data is permanently purged after 24 hours.',
+  },
+  {
+    q: 'Can I use TempMail Nova as a fake mail generator for testing?',
+    a: 'Yes. Developers and QA engineers frequently use TempMail Nova as a test email generator to verify signup flows, template rendering, and automated transactional emails. Unlike non-functional mock addresses, TempMail Nova provides real working inboxes that receive mail in real time.',
   },
   {
     q: 'Can I choose a custom email address?',
@@ -46,5 +54,13 @@ export const FAQ_LIST = [
   {
     q: 'Why should I use a temporary email instead of my personal email?',
     a: 'Using a disposable email address for one-time signups prevents your primary email from getting added to unwanted marketing databases, promotional spam lists, and potential data breach leaks.',
+  },
+  {
+    q: 'Can I use a temporary email for Discord or gaming platforms?',
+    a: 'While temporary emails work for many online registrations, third-party platforms like Discord actively maintain blocklists of recognized disposable email domains and may reject them or request phone verification. Additionally, because TempMail Nova purges messages after 24 hours, you should never use temporary addresses for accounts that require future recovery.',
+  },
+  {
+    q: 'What is a throwaway or single-use email address?',
+    a: 'A throwaway email address (or single-use email) is a short-lived inbox created for temporary web interactions. It lets you receive one-time passwords and verification links without connecting your permanent personal inbox to marketing campaigns.',
   },
 ];

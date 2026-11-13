@@ -28,9 +28,6 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://tempmailnova.com'),
-  alternates: {
-    canonical: 'https://tempmailnova.com',
-  },
   title: {
     default: 'Temp Mail – Free Temporary Email Generator | TempMail Nova',
     template: '%s | TempMail Nova',

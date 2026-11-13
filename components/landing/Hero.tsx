@@ -17,7 +17,7 @@ export default function Hero() {
 
         {/* Title */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-slate-900 dark:text-white mt-1 mb-3 leading-tight max-w-4xl mx-auto">
-          Free <span className="bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-400 dark:from-emerald-400 dark:via-teal-300 dark:to-emerald-300 bg-clip-text text-transparent">Temp Mail</span> & Temporary Email Generator
+          Free <span className="bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-400 dark:from-emerald-400 dark:via-teal-300 dark:to-emerald-300 bg-clip-text text-transparent">Temp Mail Generator</span> & Temporary Email
         </h1>
 
         {/* Subtitle */}

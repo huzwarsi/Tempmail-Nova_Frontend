@@ -1,16 +1,6 @@
 import React from 'react';
-import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Mail, AlertCircle, Home, ArrowLeft } from 'lucide-react';
-
-export const metadata: Metadata = {
-  title: '404 - Page Not Found | TempMail Nova',
-  description: 'The requested page could not be found on TempMail Nova.',
-  robots: {
-    index: false,
-    follow: true,
-  },
-};
+import { Mail, AlertCircle, Home } from 'lucide-react';
 
 export default function NotFoundPage() {
   return (

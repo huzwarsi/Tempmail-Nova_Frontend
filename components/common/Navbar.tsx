@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Mail, Menu, X, Sun, Moon, Info, MessageSquare, BookOpen, HelpCircle } from 'lucide-react';
+import { Mail, Menu, X, Sun, Moon, Info, MessageSquare, BookOpen, HelpCircle, Cpu } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
 
 export default function Navbar() {
@@ -13,6 +13,7 @@ export default function Navbar() {
 
   const navLinks = [
     { href: '/', label: 'Inbox' },
+    { href: '/how-it-works', label: 'How It Works', icon: Cpu },
     { href: '/about', label: 'About', icon: Info },
     { href: '/blog', label: 'Blog', icon: BookOpen },
     { href: '/faq', label: 'FAQ', icon: HelpCircle },
@@ -73,6 +74,7 @@ export default function Navbar() {
               onClick={toggleTheme}
               className="p-2 rounded-xl border border-slate-200 dark:border-emerald-500/30 bg-slate-100 dark:bg-slate-900/80 text-slate-700 dark:text-slate-300 hover:border-emerald-500 transition shadow-sm"
               title={isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+              aria-label={isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
             >
               {isDark ? <Sun className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4 text-slate-700" />}
             </button>
@@ -83,12 +85,16 @@ export default function Navbar() {
             <button
               onClick={toggleTheme}
               className="p-2 rounded-xl border border-slate-200 dark:border-emerald-500/30 bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300"
+              title={isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+              aria-label={isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
             >
               {isDark ? <Sun className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4 text-slate-700" />}
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 text-slate-700 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"
+              aria-label="Toggle navigation menu"
+              aria-expanded={mobileMenuOpen}
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>

@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { BreadcrumbListJsonLd } from '../../lib/structured-data';
 
 export const metadata: Metadata = {
-  title: 'How It Works | TempMail Nova Disposable Mail Engine',
+  title: 'How It Works – Disposable Email Engine',
   description:
     'Understand the technical workflow behind real-time Haraka MX intake, WebSockets delivery, HTML sanitization, and automated 24-hour message purges.',
   alternates: {
@@ -80,7 +80,7 @@ export default function HowItWorksPage() {
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12 font-manrope">
         {/* Visual Breadcrumb */}
-        <nav className="flex items-center space-x-2 text-xs text-slate-500 dark:text-slate-400 font-mono">
+        <nav aria-label="Breadcrumb" className="flex items-center space-x-2 text-xs text-slate-500 dark:text-slate-400 font-mono">
           <Link href="/" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">
             Home
           </Link>
@@ -101,26 +101,65 @@ export default function HowItWorksPage() {
           </p>
         </div>
 
-        <div className="space-y-6">
-          {steps.map((s, idx) => {
-            const Icon = s.icon;
-            return (
-              <div
-                key={idx}
-                className="bg-white dark:bg-[#080d16]/90 backdrop-blur-xl p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-emerald-500/25 flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-6 shadow-xl"
-              >
-                <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex flex-col items-center justify-center text-emerald-600 dark:text-emerald-400 font-mono font-extrabold text-xs">
-                  <Icon className="w-5 h-5 mb-0.5" />
-                  <span>{s.step}</span>
+        <section aria-labelledby="architecture-process-heading" className="space-y-6">
+          <h2 id="architecture-process-heading" className="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white tracking-tight text-center sm:text-left">
+            Step-by-Step Architecture Process
+          </h2>
+
+          <div className="space-y-6">
+            {steps.map((s, idx) => {
+              const Icon = s.icon;
+              return (
+                <div
+                  key={idx}
+                  className="bg-white dark:bg-[#080d16]/90 backdrop-blur-xl p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-emerald-500/25 flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-6 shadow-xl"
+                >
+                  <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex flex-col items-center justify-center text-emerald-600 dark:text-emerald-400 font-mono font-extrabold text-xs">
+                    <Icon className="w-5 h-5 mb-0.5" />
+                    <span>{s.step}</span>
+                  </div>
+                  <div className="space-y-2">
+                    <h3 className="text-lg font-bold text-slate-900 dark:text-white">{s.title}</h3>
+                    <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">{s.desc}</p>
+                  </div>
                 </div>
-                <div className="space-y-2">
-                  <h3 className="text-lg font-bold text-slate-900 dark:text-white">{s.title}</h3>
-                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">{s.desc}</p>
-                </div>
-              </div>
-            );
-          })}
-        </div>
+              );
+            })}
+          </div>
+        </section>
+
+        {/* Informational Guide: How to Create a Throwaway Email */}
+        <section aria-labelledby="create-throwaway-heading" className="bg-slate-50 dark:bg-[#080d16]/90 backdrop-blur-xl p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-emerald-500/25 space-y-6 shadow-sm">
+          <div className="space-y-2">
+            <h2 id="create-throwaway-heading" className="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+              How to Create a Throwaway Email Address in 3 Steps
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              Creating a disposable throwaway email address (or single-use inbox) with TempMail Nova requires no signup, password, or credit card.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm">
+            <div className="p-4 rounded-2xl bg-white dark:bg-[#05080d] border border-slate-200 dark:border-emerald-500/20 space-y-2">
+              <span className="font-mono text-emerald-600 dark:text-emerald-400 font-bold block text-xs">Step 1: Open the Generator</span>
+              <p className="text-slate-600 dark:text-slate-300 text-xs leading-relaxed">
+                Visit the homepage. A fresh throwaway email address is generated automatically and ready to receive messages immediately.
+              </p>
+            </div>
+            <div className="p-4 rounded-2xl bg-white dark:bg-[#05080d] border border-slate-200 dark:border-emerald-500/20 space-y-2">
+              <span className="font-mono text-emerald-600 dark:text-emerald-400 font-bold block text-xs">Step 2: Copy &amp; Use</span>
+              <p className="text-slate-600 dark:text-slate-300 text-xs leading-relaxed">
+                Click &quot;Copy&quot; and paste the address into any web signup, service trial, or verification form instead of your personal email.
+              </p>
+            </div>
+            <div className="p-4 rounded-2xl bg-white dark:bg-[#05080d] border border-slate-200 dark:border-emerald-500/20 space-y-2">
+              <span className="font-mono text-emerald-600 dark:text-emerald-400 font-bold block text-xs">Step 3: Read &amp; Auto-Purge</span>
+              <p className="text-slate-600 dark:text-slate-300 text-xs leading-relaxed">
+                Read OTPs and confirmation links in real time. Your inbox remains active for 24 hours before all data is purged automatically.
+              </p>
+            </div>
+          </div>
+        </section>
 
         <div className="text-center pt-6">
           <Link

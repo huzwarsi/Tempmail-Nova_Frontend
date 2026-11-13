@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { BLOG_POSTS } from '../../../lib/blog-posts';
-import { ArticleJsonLd, FAQPageJsonLd, BreadcrumbListJsonLd } from '../../../lib/structured-data';
+import { ArticleJsonLd, FAQPageJsonLd, BreadcrumbListJsonLd, toSafeIsoDate } from '../../../lib/structured-data';
 import { Clock, Calendar, User, ArrowLeft, ArrowRight, Shield, BookOpen, CheckCircle2, ChevronRight } from 'lucide-react';
 import ShareButtons from '../../../components/blog/ShareButtons';
 
@@ -22,7 +22,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) return {};
 
   const url = `https://tempmailnova.com/blog/${post.slug}`;
-  const pageTitle = post.seoTitle ? `${post.seoTitle} | TempMail Nova` : `${post.title} | TempMail Nova`;
+  const pageTitle = post.seoTitle || post.title;
+  const fullTitle = `${pageTitle} | TempMail Nova`;
 
   return {
     title: pageTitle,
@@ -34,9 +35,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       type: 'article',
       url: url,
-      title: pageTitle,
+      title: fullTitle,
       description: post.description,
-      publishedTime: new Date(post.date).toISOString(),
+      publishedTime: toSafeIsoDate(post.date),
       authors: [post.author],
       siteName: 'TempMail Nova',
       images: [
@@ -50,7 +51,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: 'summary_large_image',
-      title: pageTitle,
+      title: fullTitle,
       description: post.description,
       images: ['https://tempmailnova.com/logo.png'],
     },

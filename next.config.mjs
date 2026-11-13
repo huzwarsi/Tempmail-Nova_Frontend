@@ -14,6 +14,11 @@ const nextConfig = {
         destination: '/cookies',
         permanent: true,
       },
+      {
+        source: '/terms-of-service',
+        destination: '/terms',
+        permanent: true,
+      },
     ];
   },
   async headers() {
@@ -43,6 +48,24 @@ const nextConfig = {
           },
         ],
       },
+      {
+        source: '/dashboard/:path*',
+        headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'noindex, nofollow',
+          },
+        ],
+      },
+      {
+        source: '/admin/:path*',
+        headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'noindex, nofollow',
+          },
+        ],
+      },
     ];
   },
   async rewrites() {
@@ -61,4 +84,3 @@ const nextConfig = {
 };
 
 export default nextConfig;
-

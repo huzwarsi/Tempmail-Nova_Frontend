@@ -23,6 +23,11 @@ dist-ssr
 *.sln
 *.sw?
 
+# Next.js build output
+.next
+out
+tsconfig.tsbuildinfo
+
 # Environment Variables
 .env
 .env.local

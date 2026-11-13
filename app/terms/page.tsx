@@ -5,7 +5,7 @@ import { ChevronRight } from 'lucide-react';
 import { BreadcrumbListJsonLd } from '../../lib/structured-data';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service | TempMail Nova',
+  title: 'Terms of Service',
   description:
     'Terms of Service governing the use of TempMail Nova temporary email services, retention rules, and acceptable use policy.',
   alternates: {
@@ -47,7 +47,7 @@ export default function TermsPage() {
 
       <div className="max-w-4xl mx-auto px-4 py-12 text-slate-700 dark:text-slate-300 space-y-6 font-manrope">
         {/* Visual Breadcrumb */}
-        <nav className="flex items-center space-x-2 text-xs text-slate-500 dark:text-slate-400 font-mono">
+        <nav aria-label="Breadcrumb" className="flex items-center space-x-2 text-xs text-slate-500 dark:text-slate-400 font-mono">
           <Link href="/" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">
             Home
           </Link>
@@ -60,14 +60,14 @@ export default function TermsPage() {
 
         <div className="space-y-6 text-sm leading-relaxed bg-white dark:bg-[#080d16]/90 backdrop-blur-xl p-8 sm:p-10 rounded-3xl border border-slate-200 dark:border-emerald-500/25 shadow-xl">
           <section className="space-y-2">
-            <h3 className="text-lg font-bold text-slate-900 dark:text-white">1. Agreement to Terms</h3>
+            <h2 className="text-lg font-bold text-slate-900 dark:text-white">1. Agreement to Terms</h2>
             <p>
               By accessing or using TempMail Nova, you agree to be bound by these Terms of Service. If you disagree with any part of these terms, you may not access the service.
             </p>
           </section>
 
           <section className="space-y-2">
-            <h3 className="text-lg font-bold text-slate-900 dark:text-white">2. Acceptable Use Policy</h3>
+            <h2 className="text-lg font-bold text-slate-900 dark:text-white">2. Acceptable Use Policy</h2>
             <p>
               You agree to use TempMail Nova solely for lawful purposes. You must not use the service to:
             </p>
@@ -80,21 +80,21 @@ export default function TermsPage() {
           </section>
 
           <section className="space-y-2">
-            <h3 className="text-lg font-bold text-slate-900 dark:text-white">3. Disclaimer of Warranties & Retention</h3>
+            <h2 className="text-lg font-bold text-slate-900 dark:text-white">3. Disclaimer of Warranties & Retention</h2>
             <p>
-              TempMail Nova is provided on an "AS IS" and "AS AVAILABLE" basis. Received emails and attachments automatically expire after 24 hours. We do not guarantee permanent storage or receipt of critical financial or legal communications.
+              TempMail Nova is provided on an &quot;AS IS&quot; and &quot;AS AVAILABLE&quot; basis. Received emails and attachments automatically expire after 24 hours. We do not guarantee permanent storage or receipt of critical financial or legal communications.
             </p>
           </section>
 
           <section className="space-y-2">
-            <h3 className="text-lg font-bold text-slate-900 dark:text-white">4. Intellectual Property Rights</h3>
+            <h2 className="text-lg font-bold text-slate-900 dark:text-white">4. Intellectual Property Rights</h2>
             <p>
               The service, including its original content, features, layout, and visual styling, is and will remain the exclusive property of TempMail Nova.
             </p>
           </section>
 
           <section className="space-y-2 pt-2 border-t border-slate-200 dark:border-emerald-500/20">
-            <h3 className="text-base font-bold text-slate-900 dark:text-white">5. Governing Law</h3>
+            <h2 className="text-base font-bold text-slate-900 dark:text-white">5. Governing Law</h2>
             <p className="text-xs">
               These Terms shall be governed and construed in accordance with applicable laws without regard to conflict of law provisions.
             </p>
@@ -104,4 +104,3 @@ export default function TermsPage() {
     </>
   );
 }
-
